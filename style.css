@@ -251,8 +251,8 @@ section .cards .card button {
 /* project styles */
 .projects .card {
     background-repeat: no-repeat;
-    background-size: 60% 60%;
-    background-position: top 0 right 0;
+    background-size: 50% 50%;
+    background-position: bottom 0 right 0;
 }
 
 
