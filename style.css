@@ -252,7 +252,7 @@ section .cards .card button {
 .projects .card {
     background-repeat: no-repeat;
     background-size: 60% 60%;
-    background-position: bottom 0 right 0;
+    background-position: top 0 right 0;
 }
 
 
@@ -461,6 +461,9 @@ footer .social a img {
     }
     .education .cards .card .row2, .education .cards .card .row3 {
         font-size: 16px;
+    }
+    .projects .card {
+        background-position: top -35px right -35px;
     }
     footer {
         flex-direction: column-reverse;
