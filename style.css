@@ -248,6 +248,13 @@ section .cards .card button {
     margin-top: 20px;
 }
 
+/* project styles */
+.projects .card {
+    background-repeat: no-repeat;
+    background-size: 60% 60%;
+    background-position: bottom 0 right 0;
+}
+
 
 /* contact styles */
 .contact {
@@ -345,6 +352,9 @@ footer {
     align-items: center;
     padding: 0 100px;
 }
+footer i {
+    font-size: 11px;
+}
 footer .social a img {
     height: 25px;
     width: 25px;
@@ -369,7 +379,7 @@ footer .social a img {
 @media all and (max-width:850px) {
     header {
         padding: 0 7px;
-        border-bottom: 1px solid rgb(255, 218, 224);
+        border-bottom: 1px solid var(--hoverblue);
     }
     header .menu {
         display: inline-block;
@@ -396,8 +406,13 @@ footer .social a img {
         text-align: center;
         font-size: 20px;
         padding: 25px 0;
-        border-bottom: 1px solid rgb(255, 218, 224);
+        border-bottom: 1px solid var(--hoverblue);
         transition: 0s;
+    }
+    header .nav-links a:hover,
+    header .nav-links a.active{
+        color: var(--blue);
+        border-bottom: 2px solid var(--hoverblue);
     }
     header .logo a{
         font-size: 25px;
