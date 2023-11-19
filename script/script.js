@@ -3,6 +3,8 @@ const menu = document.querySelector(".menu");
 const navLinks = header.querySelectorAll("a");
 const sections = document.querySelectorAll("section");
 const preloader = document.querySelector(".preloader");
+const logo = document.querySelector('.logo');
+console.log(menu);
 
 document.addEventListener('DOMContentLoaded', ()=> {
     setTimeout(()=>{
@@ -14,7 +16,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
     }, 2000)
 })
 
-console.log(navLinks);
 
 navLinks.forEach(link => {
     link.addEventListener('click', ()=> {
@@ -22,14 +23,19 @@ navLinks.forEach(link => {
     })
 });
 
-menu.addEventListener('click', ()=> {
+menu.addEventListener('click', handleNav)
+
+function handleNav() {
     if (header.classList.contains('active')) {
-        header.classList.remove('active')
+        header.classList.remove('active');
+        document.querySelector('.logo').innerHTML = `<a href="#home">Dharshi</a><i class="fa fa-bars menu" aria-hidden="true" onclick="handleNav()"></i>`;
+        console.log(logo);
     }
     else {
-        header.classList.add('active')
+        header.classList.add('active');
+        document.querySelector('.logo').innerHTML = `<a href="#home">Dharshi</a><i class="fa fa-times menu" aria-hidden="true" onclick="handleNav()"></i>`;
     }
-})
+}
 
 window.addEventListener('scroll', () => {
     sections.forEach(section => {
