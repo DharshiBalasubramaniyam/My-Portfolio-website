@@ -3,90 +3,330 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
-    <title>Dharshi - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Dharshi-portfolio</title>
 </head>
 <body>
-    <header>
-        
-        <div class="logo"><i class="fa fa-bars menu" aria-hidden="true"></i><a href="#">Dharshi</a></div>
-        <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="education.html">Education</a>
-            <a href="skills.html">Skills</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
+
+    <div class="preloader">
+        <div class="bullets">
+            <div></div><div></div><div></div><div></div>
         </div>
-        <a href="CV_Dharshi.pdf"><button>Download CV</button> </a>
+    </div>
+
+
+    <header> 
+        <div class="logo"><a href="#">Dharshi</a><i class="fa fa-bars menu" aria-hidden="true"></i></div>
+        <div class="nav-links">
+            <a href="#home" class="active" id="home-link">Home</a>
+            <a href="#about" id="about-link">About</a>
+            <a href="#education" id="education-link">Education</a>
+            <a href="#skills" id="skills-link">Skills</a>
+            <a href="#projects" id="projects-link">Projects</a>
+            <a href="CV_Dharshi.pdf" class="btn" target="_blank" id="contact-link">Download CV</a>
+        </div>
     </header>
 
-
-    <section class="home">
+    <section class="home" id="home">
         <div class="left">
-            <h2>Hello world : )</h2>
-            <h1>I'm Dharshi</h1>
-            <h3>2nd year Software Engineering undergraduate with a passion for IT innovation and excellance.</h3>
-            <a href="CV_Dharshi.pdf"><button>Download CV</button></a><a href="#about"><button class="active">About Me</button></a>
+            <h2>Hello world!</h2>
+            <h1>I am <span>Dharshi</span></h1>
+            <p>2nd year Software Engineering undergraduate with a passion for IT innovation and excellance. Interested in Fullstack development. </p>
             <div class="social">
-                <a href="https://github.com/DharshiBalasubramaniyam"><img src="images/github.png" alt=""></a>
-                <a href="https://www.linkedin.com/in/dharshi-balasubramaniyam-47b193243/"><img src="images/linked in.png" alt=""></a>
-                <a href="https://www.hackerrank.com/dharshib_8"><img src="images/hackerrank.png" alt=""></a>
+                <a href="https://github.com/DharshiBalasubramaniyam"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/dharshi-balasubramaniyam-47b193243/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://medium.com/@dharshib.8"><i class="fa fa-medium" aria-hidden="true"></i></a>
+                <a href="https://www.hackerrank.com/dharshib_8"><i class="fa fa-header" aria-hidden="true"></i></a>
             </div>
+            <a href="#about"><button>About me</button></a>
         </div>
         <div class="right">
             <img src="images/my_image.png" alt="">
         </div>
-       
     </section>
 
-    <section class="about" id="about">
-        <h1>About <span>Me</span></h1>
-        <div class="about-box">
-            <div class="left">
-                <img src="images/about.jpg" alt="">
+    <section class="section about" id="about">
+        <h1> <span>About </span>Me</h1>
+        <div class="about-content">
+            <p>I am pursuing Bsc honours in Software Engineering degree program in University of Kelaniya, expanding my knowledge in sofware development principles through continuous learning, practical projects, online courses and hackathons. 
+                These experiences have equipped me with problem solving abilities, critical thinking, and a strong 
+                attention to detail qualities, With a foundation of JAVA, HTML, CSS, JavaScript and PHP, Now, I would like to explore frameworks and libraries to expand my horizons. </p>
+            <ul>
+                <li><span>Name </span>: Dharshi Balasubramaniyam</li>
+                <li><span>Email </span>: dharshib.8@gmail.com</li>
+                <li><span>Degree </span>: BSC hons, Software Engineering</li>
+                <li><span>CGPA </span>: 3.79</li>
+                <li><span>Phone </span>: 076 - 4885401</li>
+                <li><span>Address </span>: Kattuwa, Negombo.</li>
+            </ul>
+            <div class="btn"><button>Download CV</button></div>
+        </div>
+    </section>
+
+    <section class="section education" id="education">
+        <h1>Education<span> Qualification</span></h1>
+        <div class="education-card-wrapper">
+            <div class="education-card">
+                <h2>Studies</h2>
+                <div class="card-item">
+                    <p>
+                        <span>BSC honors in Software Engineering | 2022 - present</span> <br>
+                        University of Kelaniya <br>
+                        Current GPA: 3.79
+                    </p>
+                </div>
+                 <div class="card-item">
+                    <p>
+                        <span>GCE Advance Level | 2020</span><br>
+                        NG/Wijayaratnam Hindu Central College<br>
+                        Results: Combined Mathematics: A, Physics: B, ICT: A <br> Z-Score: 2.0054 
+                    </p>
+                </div>
+                <div class="card-item">
+                    <p>
+                        <span>GCE Ordinary Level | 2016</span><br>
+                        NG/Wijayaratnam Hindu Central College<br>
+                        Results : 9 A
+                    </p>
+                </div>
             </div>
-            <div class="right">
-                <p>I am pursuing Bsc honours in Software Engineering degree program in University of Kelaniya, expanding my knowledge in sofware development principles through continuous learning, practical projects, online courses and hackathons. These experiences have equipped me with problem solving abilities, critical thinking, and a strong 
-                    attention to detail qualities, With a foundation of JAVA, HTML, CSS, JavaScript and PHP, Now, I would like to explore frameworks and libraries to expand my horizons. </p>
-                <ul>
-                    <li><span>Name </span>: Dharshi Balasubramaniyam</li>
-                    
-                    <li><span>Phone </span>: 076 - 4885401</li>
-                    <li><span>Email </span>: DharshiB.8@gmail.com</li>
-                    <li><span>Address </span>: Kattuwa, Negombo.</li>
-                    <li><span>Degree </span>: BSC hons, Software Engineering</li>
-                    <li><span>CGPA </span>: 3.92</li>
-                </ul>
-                <a href="contact.html"><button>Contact Me</button></a>
+            <div class="education-card">
+                <h2>Certification</h2>
+                <div class="card-item">
+                    <p>
+                        <span>Alison</span><br>
+                        Diploma in C programming<br>
+                        Diploma in Web Development using HTML, CSS<br>
+                        JAVASCRIPT for dynamic and interactive web pages
+                    </p>
+                </div>
+                <div class="card-item">
+                    <p>
+                        <span>Sololearn</span><br>
+                        PHP<br>
+                        Introduction to JAVA, JAVA intemerdiate<br>
+                        Introduction to SQL, SQL intemerdiate
+                    </p>
+                </div>     
+            </div>
+            <div class="education-card">
+                <h2>Acheivements</h2>
+                <div class="card-item">
+                    <p>
+                        <span>Junior Hack 5.0 - Intra university hackothon</span> <br>
+                        Associated with Software Engineering Students Association, University of Kelaniya. <br>
+                        Lead of team Tech Warriors of 4 and won first place.
+                    </p>
+                </div>
             </div>
         </div>
         
-        
+    </section>
+
+    <section class="section skills" id="skills">
+        <h1><span>Technical </span>Skills</h1>
+       <div class="skill-card-wrapper">
+            <div class="skill-card">
+                <h2>Frontend</h2>
+                <div class="card-item">
+                        <div><span>HTML</span><span>80%</span></div>
+                        <div class="progress" id="html"></div>
+                </div>
+                <div class="card-item">
+                    <div><span>CSS</span><span>75%</span></div>
+                    <div class="progress" id="css"></div>
+                </div>
+                <div class="card-item">
+                    <div><span>JavaScript</span><span>55%</span></div>
+                    <div class="progress" id="js"></div>
+                </div>
+                <div class="card-item">
+                    <div><span>React JS</span><span>40%</span></div>
+                    <div class="progress" id="react"></div>
+                </div>
+                
+                
+            </div>
+            <div class="skill-card">
+                <h2>Backend</h2>
+                <div class="card-item">
+                    <div><span>JAVA</span><span>60%</span></div>
+                    <div class="progress" id="java"></div>
+                </div>
+                <div class="card-item">
+                    <div><span>Python</span><span>30%</span></div>
+                    <div class="progress" id="python"></div>
+                </div>
+                <div class="card-item">
+                    <div><span>PHP</span><span>75%</span></div>
+                    <div class="progress" id="php"></div>
+                </div>
+                <div class="card-item">
+                    <div><span>MYSQL</span><span>80%</span></div>
+                    <div class="progress" id="sql"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h2>Tools</h2>
+                <div class="card-item">
+                    <div><span>Git/Github</span><span>60%</span></div>
+                    <div class="progress" id="git"></div>
+                </div>
+                <div class="card-item">
+                    <div><span>VS Code</span><span>80%</span></div>
+                    <div class="progress" id="vscode"></div>
+                </div>
+                <div class="card-item">
+                    <div><span>Intellij idea </span><span>70%</span></div>
+                    <div class="progress" id="intellij"></div>
+                </div>
+            </div>
+       </div>
         
     </section>
 
+    <section class="section projects" id="projects">
+        <h1>My <span>Projects</span></h1>
+        <div class="swiper projects-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <div class="img">
+                            <img src="images/notes-app.png" alt="">
+                        </div>
+                        <h2>
+                            <span>Notes App</span>
+                            <a href="https://github.com/DharshiBalasubramaniyam/Notes-App-Version-2"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="https://notes-app-swart-zeta.vercel.app/"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                        </h2>
+                        <p>
+                            This is a simple notes app where users can add, edit, delete and view notes using React js. I have used JSON server as api and used axios to perform HTTP requests in react, by following api convensions such as GET, POST, PUT and DELETE.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <div class="img">
+                            <img src="images/weather-app.png" alt="">
+                        </div>
+                        <h2>
+                            <span>Weather App</span>
+                            <a href="https://github.com/DharshiBalasubramaniyam/ReactJs-Weather-App"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </h2>
+                        <p>
+                            This is a simple weather app  in react js. Weather details are fetched from open weather API. It displays the current temperature, wind speed and humidity.   
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <div class="img">
+                            <img src="images/random-quote-generator.png" alt="">
+                        </div>
+                        <h2>
+                            <span>Random Quote Generator</span>
+                            <a href="https://github.com/DharshiBalasubramaniyam/Random-Quote-Generator"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </h2>
+                        <p>
+                            This is a random quote generator using HTML, CSS and JavaScript. Users can  copy the quote to their clipboard.
+                            For each qoute the color also randomly changed.
+                            Qoutes are fetched using qoutes API.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <div class="img">
+                            <img src="images/icyco-website.png" alt="">
+                        </div>
+                        <h2>
+                            <span>Ice cream parlour website</span>
+                            <a href="https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="https://icyco.vercel.app/"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                        </h2>
+                        <p>
+                            This is a resposive website using HTML, CSS and JavaScript. The main features:
+                            Responsive navbar, home, products, about, contact form and reviews sections and cart.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <div class="img">
+                            <img src="images/todolistapp.png" alt="">
+                        </div>
+                        <h2>
+                            <span>To Do list</span>
+                            <a href="https://github.com/DharshiBalasubramaniyam/To-Do-List"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="https://to-do-list-app-seven-puce.vercel.app"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                        </h2>
+                        <p>
+                            This is a simple to do list app using HTML, CSS and JavaScript.
+                            The main features:
+                            User can add, delete, mark as complete tasks,
+                            and view all, pending and completed tasks seperatly.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <div class="img">
+                            <img src="images/user-authentication-system.png" alt="">
+                        </div>
+                        <h2>
+                            <span>User Authentication System</span>
+                            <a href="https://github.com/DharshiBalasubramaniyam/SENG-21253-Individual-Assignment"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </h2>
+                        <p>
+                            An application having three user roles super admin, admin and user.
+                            Main features: Register, login, add products and users.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-pagination"></div>
+
+
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <h1>Get in <span>Touch</span></h1>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Your Name" name="name">
+                <input type="email" placeholder="Your Email" name="email">
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Your Subject" name="subject">
+            </div>
+            <div class="input-box">
+                <textarea placeholder="Your Message" rows="10" name="message"></textarea>
+            </div>
+            <div class="input-box">
+                <button>Send</button>
+            </div>
+        </form>
+    </section>
 
     <footer>
-        <div class="copy-right">
-            <i class="fa-regular fa-copyright"></i>
-            copyright | @2023 by DharshiB | All Rights Deserved
-        </div>
-        <div class="social">
-            <a href="https://github.com/DharshiBalasubramaniyam"><img src="images/github.png" alt=""></a>
-            <a href="https://www.linkedin.com/in/dharshi-balasubramaniyam-47b193243/"><img src="images/linked in.png" alt=""></a>
-            <a href="https://www.hackerrank.com/dharshib_8"><img src="images/hackerrank.png" alt=""></a>
-        </div>
-        
+        <p>&copy; Created by Dharshi | All rights deserved</p>
     </footer>
+
+    <div class="contact-icon"><a href="#contact"><i class="fa fa-commenting-o" aria-hidden="true"></i></a></div>
+
     
 
-    <script src="script.js"></script>
+    <script src="script/swiper-bundle.min.js"></script>
+    <script src="script/script.js"></script>
+    
+
+
 </body>
-
-<!-- e5ebfc -->
-
 </html>
-
-
-
