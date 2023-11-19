@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
 navLinks.forEach(link => {
     link.addEventListener('click', ()=> {
         header.classList.remove('active');
+        document.querySelector('.logo').innerHTML = `<a href="#home">Dharshi</a><i class="fa fa-bars menu" aria-hidden="true" onclick="handleNav()"></i>`;
+
     })
 });
 
