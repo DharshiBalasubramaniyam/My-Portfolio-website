@@ -656,7 +656,7 @@ footer p {
     }
     
     .home button{
-        display: none;
+        /* display: none; */
     }
     .home .social a {
         margin-right: 5px;
