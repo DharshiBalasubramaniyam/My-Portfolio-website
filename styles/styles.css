@@ -10,16 +10,21 @@
     font-family: 'Poppins', Georgia, 'Times New Roman', Times, serif;
 }
 :root {
-    --Body: #200174;
-    --main: #a9ebff;
+    /* rgb(83, 91, 235),rgb(76, 11, 174 */
+    --Body: rgb(83, 91, 235);
+    --main: hsl(264, 100%, 94%);
 }
 body {
     position: relative;
-    background-image: linear-gradient(135deg, var(--Body) 0%, #3d1268 100%);
+    background-image: radial-gradient(circle at 29% 55%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 4%,transparent 4%, transparent 44%,transparent 44%, transparent 100%),radial-gradient(circle at 85% 89%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 51%,transparent 51%, transparent 52%,transparent 52%, transparent 100%),radial-gradient(circle at 6% 90%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 53%,transparent 53%, transparent 64%,transparent 64%, transparent 100%),radial-gradient(circle at 35% 75%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 6%,transparent 6%, transparent 98%,transparent 98%, transparent 100%),radial-gradient(circle at 56% 75%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 16%,transparent 16%, transparent 23%,transparent 23%, transparent 100%),radial-gradient(circle at 42% 0%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 3%,transparent 3%, transparent 26%,transparent 26%, transparent 100%),radial-gradient(circle at 29% 28%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 51%,transparent 51%, transparent 75%,transparent 75%, transparent 100%),radial-gradient(circle at 77% 21%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 35%,transparent 35%, transparent 55%,transparent 55%, transparent 100%),radial-gradient(circle at 65% 91%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 46%,transparent 46%, transparent 76%,transparent 76%, transparent 100%),linear-gradient(45deg, rgb(83, 91, 235),rgb(76, 11, 174));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;
 }
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 70px;
+    scroll-padding-top: 80px;
 }
 ::selection {
     background-color: var(--main);
@@ -83,7 +88,11 @@ header {
     justify-content: space-between;
     padding: 0 100px;
     z-index: 3;
-    background-color: var(--Body);
+    background-image: radial-gradient(circle at 29% 55%,
+     hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 4%,transparent 4%, transparent 44%,transparent 44%, transparent 100%),
+     radial-gradient(circle at 77% 21%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 35%,transparent 35%, transparent 55%,transparent 55%, transparent 100%),
+     radial-gradient(circle at 65% 91%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 46%,transparent 46%, transparent 76%,transparent 76%, transparent 100%),
+     linear-gradient(45deg, rgb(83, 91, 235),rgb(76, 11, 174));
     box-shadow: 0 1px 1px var(--main);
 }
 
@@ -96,7 +105,6 @@ header .nav-links a, button{
     padding: 7px 15px;
     margin: 0 12px;
     font-size: 18px;
-    transition: background-color 0.5s;
     cursor: pointer;
 }
 button {
@@ -106,8 +114,9 @@ header .nav-links a:hover{
     color: white;
 }
 header .nav-links a.active{
-    color: white;
-    border-bottom: 2px solid white;
+    color: rgb(17, 22, 117);;
+    border-bottom: 2px solid rgb(17, 22, 117);
+    font-weight: 600;
 }
 header .nav-links a:last-child, button{
     background-color: var(--main);
@@ -132,7 +141,7 @@ section {
     transition: opacity 0.5s;
 }
 .home {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -178,13 +187,16 @@ button{
     color: var(--Body);
 }
 .home .right{
-    width: 50%;
+    width: max-content;
     display: flex;
     align-items: center;
+    padding: 10px;
     justify-content: center;
     transition: 0.5s;
     transform: translateX(25px);
     opacity: 0;
+    border-radius: 50%;
+    border: 2px solid var(--main);
 }
 section.reveal .left,
 section.reveal .right {
@@ -196,16 +208,14 @@ section.reveal .right {
     width: 400px;
     display: block;
     position: relative;
-    border: 15px solid var(--main);
-    border: 25px solid transparent;
     border-radius: 50%;
-    border: 10px solid var(--main);
     box-shadow: 0 0 50px white;
     background-image: linear-gradient(var(--main), white);
+    background-color: var(--Body);
     transition: transform 0.3s;
     cursor: pointer;
 }
-.home .right img:hover {
+.home .right:hover {
     transform: scale(1.03);
 }
 
@@ -259,7 +269,8 @@ section.reveal .about-content {
     font-weight: 600;
 }
 h1 span {
-    color: rgb(255, 255, 255);
+    color: rgb(17, 22, 117);
+    font-weight: 600;
 }
 .about .btn {
     text-align: center;
@@ -607,6 +618,11 @@ footer p {
         height: 100vh;
         transition: 0.3s;
         background-color: var(--Body);
+        background-image: radial-gradient(circle at 29% 55%,
+     hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 4%,transparent 4%, transparent 44%,transparent 44%, transparent 100%),
+     radial-gradient(circle at 77% 21%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 35%,transparent 35%, transparent 55%,transparent 55%, transparent 100%),
+     radial-gradient(circle at 65% 91%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 46%,transparent 46%, transparent 76%,transparent 76%, transparent 100%),
+     linear-gradient(45deg, rgb(83, 91, 235),rgb(76, 11, 174));
     }
     header .nav-links.active {
         left: 0;
@@ -678,6 +694,9 @@ footer p {
     html {
         scroll-behavior: smooth;
         scroll-padding-top: 50px;
+    }
+    .input-box:first-of-type{
+        flex-direction: column;
     }
     
 footer p {
