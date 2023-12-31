@@ -10,9 +10,11 @@
     font-family: 'Poppins', Georgia, 'Times New Roman', Times, serif;
 }
 :root {
-    /* rgb(83, 91, 235),rgb(76, 11, 174 */
     --Body: rgb(83, 91, 235);
     --main: hsl(264, 100%, 94%);
+    --dark:rgb(226, 141, 255);
+    
+     /* --dark: yellow; */
 }
 body {
     position: relative;
@@ -114,8 +116,8 @@ header .nav-links a:hover{
     color: white;
 }
 header .nav-links a.active{
-    color: rgb(17, 22, 117);;
-    border-bottom: 2px solid rgb(17, 22, 117);
+    color: var(--dark);;
+    border-bottom: 2px solid var(--dark);
     font-weight: 600;
 }
 header .nav-links a:last-child, button{
@@ -269,8 +271,7 @@ section.reveal .about-content {
     font-weight: 600;
 }
 h1 span {
-    color: rgb(17, 22, 117);
-    font-weight: 600;
+    color: var(--dark);
 }
 .about .btn {
     text-align: center;
@@ -298,6 +299,7 @@ h1 span {
     transform: translateY(25px);
     opacity: 0;
 }
+
 .skills .skill-card:nth-of-type(2),
 .education .education-card:nth-of-type(2) {
     transition-delay: 0.1s;
@@ -317,6 +319,7 @@ section.reveal .education-card {
     position: relative;
     width: 200px;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 .skills .skill-card h2:after,
 .education .education-card h2:after{
@@ -332,7 +335,7 @@ section.reveal .education-card {
 .skills .skill-card .card-item,
 .education .education-card .card-item {
     background-color: transparent;
-    margin: 10px 0;
+    padding: 10px 0;
     width: 100%;
     padding: 10px;
     text-align: center;
@@ -343,6 +346,30 @@ section.reveal .education-card {
 .skills .skill-card .card-item:last-of-type,
 .education .education-card .card-item:last-of-type {
     border-bottom: none;
+}
+.education .education-card .card-item{
+    border: none;
+    border-left: 2px solid white;
+    position: relative;
+    padding: 0 10px 10px 20px;
+    text-align: left;
+}
+.education .education-card .card-item::before {
+    position: absolute;
+    content: '';
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-image: linear-gradient(to left, rgb(63, 0, 86), var(--dark));
+    border: 2px solid var(--main);
+    right:calc(100% - 7px);
+    top: 5px;
+}
+.education .education-card .card-item a i {
+    font-size: 12px;
+}
+.education-card .card-item a:hover {
+    color: var(--dark);
 }
 .skills .skill-card:hover,
 .education .education-card:hover{
@@ -355,40 +382,48 @@ section.reveal .education-card {
     align-items: center;
     justify-content: space-between;
 }
+.education-card .card-item  div {
+    align-items: flex-start;
+}
 .skill-card .card-item .progress {
     position: relative;
     width: 100%;
     border-radius: 15px;
-    border: 1px solid var(--main);
+    background-color: var(--main);
     height: 6px;
     margin-top: 5px;
 }
 .skill-card .card-item .progress:after {
     position: absolute;
     content: '';
-    width: 80%;
-    height: 4.5px;
+    width: 0;
+    height: 100%;
     border-radius: 15px;
     top: 0;
     left: 0;
-    background-image: linear-gradient(90deg, white 40%, var(--main));
+    transition: width 1.5s;
+    /* background-color: var(--dark); */
+    background-image: linear-gradient(to left, rgb(63, 0, 86), var(--dark));
 }
 .skill-card .card-item  span,
 .education-card .card-item  span {
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 600;
     color: white;
 }
-#java:after { width: 60%;}
-#html:after { width: 80%;}
-#js:after { width: 55%;}
-#php:after { width: 75%;}
-#css:after { width: 75%;}
-#sql:after { width: 80%;}
-#react:after { width: 40%;}
-#git:after { width: 60%;}
-#python:after { width: 30%;}
-#vscode:after { width: 80%;}
-#intellij:after { width: 70%;}
+section.reveal #java:after { width: 60%;}
+section.reveal #html:after { width: 80%;}
+section.reveal #js:after { width: 55%;}
+section.reveal #php:after { width: 75%;}
+section.reveal #css:after { width: 75%;}
+section.reveal #sql:after { width: 80%;}
+section.reveal #react:after { width: 40%;}
+section.reveal #git:after { width: 60%;}
+section.reveal #python:after { width: 30%;}
+section.reveal #vscode:after { width: 80%;}
+section.reveal #intellij:after { width: 70%;}
+
+
 
 /* project styles */
 
@@ -704,4 +739,10 @@ footer p {
 }
     
     
+}
+
+.education-card .card-item a:hover i,
+.education-card .card-item a i:hover{
+    background-color: transparent;
+    color: var(--dark);
 }
