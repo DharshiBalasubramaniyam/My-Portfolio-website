@@ -362,7 +362,7 @@ section.reveal .education-card {
     border-radius: 50%;
     background-image: linear-gradient(to left, rgb(63, 0, 86), var(--dark));
     border: 2px solid var(--main);
-    right:calc(100% - 7px);
+    right:calc(100% - 6.5px);
     top: 5px;
 }
 .education .education-card .card-item a i {
