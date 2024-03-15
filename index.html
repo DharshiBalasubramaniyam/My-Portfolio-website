@@ -315,19 +315,20 @@
 
     <section class="section contact" id="contact">
         <h1>Get in <span>Touch</span></h1>
-        <form action="#">
+        <form id="contact-form">
+            <small id="error"></small>
             <div class="input-box">
-                <input type="text" placeholder="Your Name" name="name">
-                <input type="email" placeholder="Your Email" name="email">
+                <input type="text" placeholder="Your Name" name="name" id="name">
+                <input type="email" placeholder="Your Email" name="email" id="email">
             </div>
             <div class="input-box">
-                <input type="text" placeholder="Your Subject" name="subject">
+                <input type="text" placeholder="Your Subject" name="subject" id="subject">
             </div>
             <div class="input-box">
-                <textarea placeholder="Your Message" rows="10" name="message"></textarea>
+                <textarea placeholder="Your Message" rows="10" name="message" id="body"></textarea>
             </div>
             <div class="input-box">
-                <button>Send</button>
+                <button type="submit">Send</button>
             </div>
         </form>
     </section>
@@ -342,7 +343,7 @@
 
     <script src="./assets/script/swiper-bundle.min.js"></script>
     <script src="./assets/script/script.js"></script>
-    
+    <script src="./assets/script/contactForm.js"></script>
 
 
 </body>

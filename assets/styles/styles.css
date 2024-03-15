@@ -559,6 +559,10 @@ i:hover {
     transition: 0.5s;
     opacity: 0;
 }
+.contact form small {
+    color: rgb(255, 121, 121);
+    font-size: 16px;
+}
 section.reveal form {
     transform: translateY(0);
     opacity: 1;
