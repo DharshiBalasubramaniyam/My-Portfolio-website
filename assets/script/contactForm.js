@@ -38,7 +38,7 @@ function sendMail() {
 
     const mail_link = "mailto:dharshib.8@gmail.com" +
         "?Subject=" + encodeURIComponent(mail_subject) +
-        "&body=Hi Dharshi, \nI am " + sender_name + "found through your portfolio." + encodeURIComponent(mail_body)
+        "&body=Hi Dharshi, \nI am " + sender_name + ", found you through your portfolio.\n" + encodeURIComponent(mail_body)
 
     window.location.href = mail_link;
 }
