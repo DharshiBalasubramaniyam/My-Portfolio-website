@@ -10,6 +10,7 @@ contactForm.addEventListener('submit', (e) => {
     if (validateFields()) {
         sendMail()
     }
+    resetFields()
 })
 
 function validateFields() {
@@ -43,3 +44,9 @@ function sendMail() {
     window.location.href = mail_link;
 }
 
+function resetFields() {
+    name.value = ""
+    email.value = ""
+    subject.value = ""
+    body.value = ""
+}
