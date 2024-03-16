@@ -7,7 +7,7 @@
     outline: none;
     list-style-type: none;
     color: var(--main);
-    font-family: 'Poppins', Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif, Georgia, 'Times New Roman', Times, serif;
 }
 :root {
     --Body: rgb(0, 9, 182);
@@ -239,10 +239,13 @@ section.reveal .right {
     opacity: 0;
     transform: translateY(25px);
     transition:0.5s;
+    visibility: hidden;
+
 }
 section.reveal .about-content {
     transform: translateY(0);
     opacity: 1;
+    visibility: visible;
 }
 .about, .section {
     display: flex;
@@ -311,10 +314,11 @@ h1 span {
     transition: 0.5s;
     transform: translateY(25px);
     opacity: 0;
+    visibility: hidden;
 }
 
 .skills .skill-card:nth-of-type(2),
-.education .education-card:nth-of-type(2) {
+.education .education-card:nth-of-type(2){
     transition-delay: 0.1s;
 }
 .skills .skill-card:nth-of-type(3),
@@ -322,9 +326,13 @@ h1 span {
     transition-delay: 0.2s;
 }
 section.reveal .skill-card,
-section.reveal .education-card {
+section.reveal .education-card, 
+section.reveal .project-card,
+section.reveal.blogs a{
+    cursor: pointer;
     transform: translateY(0);
     opacity: 1;
+    visibility: visible;
 }
 .skills .skill-card h2,
 .education .education-card h2{
@@ -455,20 +463,32 @@ section.reveal .swiper {
 .projects > h1 {
     margin: 0;
 }
-
+.swiper-wrapper {
+    /* background-color: aqua; */
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    align-items:stretch;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+}
 .swiper-slide {
-    padding: 10px 0 35px;
-    width: 300px;
-
+    transition: 0.5s;
+    flex: 1 1 350px;
 }
 .project-card {
     border: 2px solid white;
-    height: 98%;
     cursor: pointer;
-    padding: 10px;transition: 0.5s;
+    height: 100%;transition: 0.5s;
+    transition: 0.5s;
+    transform: translateY(25px);
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(7, 15, 109, 0.211);
 }
 .project-card .img {
-    height:60%;
+    height:300px;
     width: 100%;
     overflow: hidden;
 }
@@ -476,7 +496,7 @@ section.reveal .swiper {
     display: flex;
     align-items: center;
     font-size: 19px;
-    margin: 5px 0;
+    margin: 5px 0;padding: 0 10px;
 }
 .project-card h2 span {
     flex: 1;
@@ -484,11 +504,11 @@ section.reveal .swiper {
     font-weight: 600;
 }
 .project-card p {
-    font-size: 15px;
-    color: var(--main);
+    font-size: 15px;padding: 0 10px;
+    color: var(--main);text-align: justify;
 }
 .project-card h2 i {
-    margin-right: 10px;
+    margin-left: 10px;
     background-color: var(--main);
     color: var(--Body);
     border-radius: 50%;
@@ -510,12 +530,40 @@ section.reveal .swiper {
 .project-card .img img {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
     transition: 0.3s;
 }
-.project-card:hover {
+.swiper-slide:hover,
+.blogs a:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 15px var(--main);
+    box-shadow: 0 0 15px white;
+}
+.project-card .tech {
+    padding: 0 10px 10px;
+}
+.project-card .tech button {
+    font-size: 15px;
+    padding: 3px 10px;
+    margin: 10px 5px 0 0; pointer-events: none;
+}
+.project-card .tech button:first-of-type {
+    background-color: rgb(255, 233, 250);
+    color: rgb(255, 0, 187);
+}
+.project-card .tech button:nth-of-type(2) {
+    background-color: rgb(218, 255, 218);
+    color: green;
+}
+.project-card .tech button:nth-of-type(3) {
+    background-color: rgb(255, 254, 218);
+    color: rgb(197, 128, 0);
+}
+.project-card .tech button:nth-of-type(4) {
+    background-color: rgb(255, 218, 218);
+    color: rgb(197, 0, 0);
+}
+.project-card .tech button:nth-of-type(5) {
+    background-color: rgb(238, 218, 255);
+    color: rgb(148, 0, 197);
 }
 .swiper-pagination-bullet {
     background-color: transparent;
@@ -548,6 +596,47 @@ section.reveal .swiper {
 i:hover {
     background-color:white;
     box-shadow: 0 0 20px white;
+}
+
+/* blogs styles */
+.blogs a {
+    flex: 1 1 350px;
+    height: 350px;
+    display: inline-flex;
+    transition: 0.5s;
+    visibility: hidden;
+    transition: 0.5s;
+    transform: translateY(25px);
+}
+.blogs .blog-card {
+    flex: 1 1 350px;
+    background: rgba(7, 15, 109, 0.211);
+    padding: 10px;
+    height: 350px;display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    
+}
+.blogs .blog-card img{
+    width: 100px;
+    height: 100px;
+}
+.blogs .blog-card h1 {
+    font-size: 2em;text-transform: capitalize
+}
+section.reveal .project-card,
+section.reveal.blogs a{
+    cursor: pointer;
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+section.reveal.blogs a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px white;
 }
 
 /* contact form styles */
@@ -642,7 +731,7 @@ footer p {
     
 }
 
-@media all and (max-width:850px) {
+@media all and (max-width: 950px) {
     header {
         padding: 0 15px;
         height: 55px;
@@ -692,6 +781,9 @@ footer p {
     header .logo a{
         font-size: 25px;
     }
+}
+
+@media all and (max-width:850px) {
     .home {
         padding-top: 70px;
         flex-direction: column-reverse;
@@ -763,4 +855,9 @@ footer p {
 .education-card .card-item a i:hover{
     background-color: transparent;
     color: var(--dark);
+}
+@media all and (max-width:400px) {
+    .swiper-slide {
+        height: max-content;
+    }
 }

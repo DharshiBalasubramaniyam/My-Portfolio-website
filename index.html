@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/styles/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="./assets/styles/swiper-bundle.min.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
@@ -28,7 +28,8 @@
             <a href="#education" id="education-link">Education</a>
             <a href="#skills" id="skills-link">Skills</a>
             <a href="#projects" id="projects-link">Projects</a>
-            <a href="CV_Dharshi.pdf" class="btn" target="_blank" id="contact-link" style="transition: 0.5s;">Download CV</a>
+            <a href="#blogs" id="blogs-link">Blogs</a>
+            <a href="./assets/cv.html" class="btn" target="_blank" id="contact-link" style="transition: 0.5s;">Download CV</a>
         </div>
     </header>
 
@@ -64,7 +65,7 @@
                 <li><span>Phone </span>: 076 - 4885401</li>
                 <li><span>Address </span>: Kattuwa, Negombo.</li>
             </ul>
-            <div class="btn"><a href="CV_Dharshi.pdf" target="_blank"><button>Download CV</button></a></div>
+            <div class="btn"><a href="./assets/cv.html" target="_blank"><button>Download CV</button></a></div>
         </div>
     </section>
 
@@ -210,8 +211,26 @@
 
     <section class="section projects" id="projects">
         <h1>My <span>Projects</span></h1>
-        <div class="swiper projects-slider">
+        <!-- <div class="swiper projects-slider"> -->
             <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <div class="img">
+                            <img src="images/projects/bitebliss.png" alt="">
+                        </div>
+                        <h2>
+                            <span>Bitebliss</span>
+                            <a href="https://github.com/DharshiBalasubramaniyam/BiteBliss-Fullstack-Web-Application" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </h2>
+                        <p>
+                            Group project for SENG 22212 - Software architecture course module. A full stack web application designed to provide users with a platform for order foods. 
+                            My responsibilty: Team leader | User authentication | Sign in | Sign up | Reset password
+                        </p>
+                        <div class="tech">
+                            <button>React JS</button><button>Spring boot</button><button>JWT</button><button>MySQL</button>
+                        </div>
+                    </div>
+                </div>
                 <div class="swiper-slide">
                     <div class="project-card">
                         <div class="img">
@@ -223,8 +242,11 @@
                             <a href="https://notes-app-swart-zeta.vercel.app/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a>
                         </h2>
                         <p>
-                            This is a simple notes app where users can add, edit, delete and view notes using React js. I have used JSON server as api and used axios to perform HTTP requests in react, by following api convensions such as GET, POST, PUT and DELETE.
+                            This is a simple notes app where users can add, edit, delete and view notes. I have used JSON server as api and used axios to perform HTTP requests in react, by following api convensions such as GET, POST, PUT and DELETE.
                         </p>
+                        <div class="tech">
+                            <button>React JS</button><button>Axios</button><button>React router</button>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -233,12 +255,15 @@
                             <img src="images/projects/pinkpearl-web-app.png" alt="">
                         </div>
                         <h2>
-                            <span>Ladies fashion full stack web app</span>
+                            <span>Pink pearl</span>
                             <a href="https://github.com/DharshiBalasubramaniyam/Ladies-fashion-full-stack-website" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                         </h2>
                         <p>
-                            <strong>multi roles:</strong> User | Admin, user authencation(sign in | sign up), <strong>User functions:</strong> search | browse | wishlist | cart | orders | profile, <strong>Admin functions:</strong> dashboard | products crud | categories crud | users management | orders management
+                            Group project for SENG 21253 - Web application development course module. A full stack web application designed to provide users with a platform for purchase ladies fashion items online. My responsibilty: Team leader | cart, wishlist management | user profile | rewards management
                         </p>
+                        <div class="tech">
+                            <button>PHP</button><button>HTML</button><button>CSS</button><button>JS</button><button>MySQL</button>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -251,8 +276,11 @@
                             <a href="https://github.com/DharshiBalasubramaniyam/ReactJs-Weather-App" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                         </h2>
                         <p>
-                            This is a simple weather app  in react js. Weather details are fetched from open weather API. It displays the current temperature, wind speed and humidity.   
+                            This is a simple weather app. Weather details are fetched from open weather API. It displays the current temperature, wind speed and humidity.   
                         </p>
+                        <div class="tech">
+                            <button>React js</button><button>Axios</button><button>Open weather API</button>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -265,10 +293,13 @@
                             <a href="https://github.com/DharshiBalasubramaniyam/Random-Quote-Generator" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                         </h2>
                         <p>
-                            This is a random quote generator using HTML, CSS and JavaScript. Users can  copy the quote to their clipboard.
-                            For each qoute the color also randomly changed.
+                            Users generate random quotes and copy them to their clipboard.
+                            For each qoute the background color have been changed dynamically.
                             Qoutes are fetched using qoutes API.
                         </p>
+                        <div class="tech">
+                            <button>HTML</button><button>CSS</button><button>JS</button>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -282,34 +313,64 @@
                             <a href="https://icyco.vercel.app/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a>
                         </h2>
                         <p>
-                            This is a resposive website using HTML, CSS and JavaScript. The main features:
-                            Responsive navbar, home, products, about, contact form and reviews sections and cart.
-                        </p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="project-card">
-                        <div class="img">
-                            <img src="images/projects/todolistapp.png" alt="">
-                        </div>
-                        <h2>
-                            <span>To Do list</span>
-                            <a href="https://github.com/DharshiBalasubramaniyam/To-Do-List" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                            <a href="https://to-do-list-app-seven-puce.vercel.app" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a>
-                        </h2>
-                        <p>
-                            This is a simple to do list app using HTML, CSS and JavaScript.
                             The main features:
-                            User can add, delete, mark as complete tasks,
-                            and view all, pending and completed tasks seperatly.
+                            Responsive navbar, hero section, about, contact form and reviews section | Browse products | Cart management
                         </p>
+                        <div class="tech">
+                            <button>HTML</button><button>CSS</button><button>JS</button>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <a href="https://github.com/DharshiBalasubramaniyam"><button>Explore more...</button></a>
             
-            <div class="swiper-pagination"></div>
+            <!-- <div class="swiper-pagination"></div> -->
             
 
+        <!-- </div> -->
+    </section>
+
+    <section class="section blogs" id="blogs">
+        <h1>My <span>Blog Articles</span></h1>
+        <div class="swiper-wrapper">
+            <a href="https://medium.com/@dharshib.8/building-a-secure-restful-user-crud-with-spring-boot-a-step-by-step-guide-486ed3fd4e5a">
+                <div class="blog-card">
+                    <img src="./images//blogs/spring boot.png" alt="">
+                    <h1>building restful user crud with spring boot.</h1>
+                </div>
+            </a>
+            <a href="https://medium.com/@dharshib.8/mastering-design-patterns-in-java-1e39194ac480">
+                <div class="blog-card">
+                    <img src="./images//blogs/java.png" alt="">
+                    <h1>Mastering design patterns in JAVA.</h1>
+                </div>
+            </a>
+            <a href="https://medium.com/@dharshib.8/mastering-react-a-beginners-guide-to-the-top-5-react-hooks-04b4fedaa21e">
+                <div class="blog-card">
+                    <img src="./images//blogs/react.png" alt="">
+                    <h1>Beginners guide to Top 5 react hooks.</h1>
+                </div>
+            </a>
+            <a href="https://medium.com/@dharshib.8/empowering-javascript-unveiling-the-significance-of-es6-3c647d0aaea6">
+                <div class="blog-card">
+                    <img src="./images/blogs/js.png" alt="">
+                    <h1>Unveiling the significance of ES6.</h1>
+                </div>
+            </a>
+            <a href="https://medium.com/@dharshib.8/solid-principles-explained-in-java-5b9fca1f5540">
+                <div class="blog-card">
+                    <img src="./images//blogs/java.png" alt="">
+                    <h1>Mastering SOLID principles in JAVA.</h1>
+                </div>
+            </a>
+            <a href="https://medium.com/@dharshib.8/oop-explained-in-java-9dd60fe6d71d">
+                <div class="blog-card">
+                    <img src="./images//blogs/java.png" alt="">
+                    <h1>Mastering OOP concepts in JAVA.</h1>
+                </div>
+            </a>
+            
         </div>
     </section>
 
@@ -341,7 +402,7 @@
 
     
 
-    <script src="./assets/script/swiper-bundle.min.js"></script>
+    <!-- <script src="./assets/script/swiper-bundle.min.js"></script> -->
     <script src="./assets/script/script.js"></script>
     <script src="./assets/script/contactForm.js"></script>
 
