@@ -9,8 +9,8 @@ contactForm.addEventListener('submit', (e) => {
     e.preventDefault()
     if (validateFields()) {
         sendMail()
+        resetFields()
     }
-    resetFields()
 })
 
 function validateFields() {
