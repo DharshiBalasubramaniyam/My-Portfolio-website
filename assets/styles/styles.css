@@ -1088,6 +1088,15 @@ main .tech button {
     footer p {
         font-size: 11px;
     }
+    .skill-item-wrapper {
+        background-color: transparent;
+        width: 150px;
+        height: 150px;
+        perspective: 1000px;
+    }
+    .skill-item-wrapper .skill-item-name h2 {
+        font-size: 16px;
+    }
 
 
 }
@@ -1101,5 +1110,14 @@ main .tech button {
 @media all and (max-width:400px) {
     .swiper-slide {
         height: max-content;
+    }
+    .skill-item-wrapper {
+        background-color: transparent;
+        width: 75px;
+        height: 75px;
+        perspective: 1000px;
+    }
+    .skill-item-wrapper .skill-item-name h2 {
+        font-size: 14px;
     }
 }
