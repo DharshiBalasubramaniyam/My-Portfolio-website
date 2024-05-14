@@ -13,22 +13,11 @@
 :root {
     --body: rgb(50, 50, 50);
     --primary: rgb(238, 238, 238);
-    /* --secondary: rgb(255, 141, 198); */
     --secondary: rgb(255, 141, 187);
 }
 
 body {
     position: relative;
-    /* background-image: radial-gradient(circle at 29% 55%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 4%,transparent 4%, transparent 44%,transparent 44%, transparent 100%),
-    radial-gradient(circle at 85% 89%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 51%,transparent 51%, transparent 52%,transparent 52%, transparent 100%),
-    radial-gradient(circle at 6% 90%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 53%,transparent 53%, transparent 64%,transparent 64%, transparent 100%),
-    radial-gradient(circle at 35% 75%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 6%,transparent 6%, transparent 98%,transparent 98%, transparent 100%),
-    radial-gradient(circle at 56% 75%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 16%,transparent 16%, transparent 23%,transparent 23%, transparent 100%),
-    radial-gradient(circle at 42% 0%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 3%,transparent 3%, transparent 26%,transparent 26%, transparent 100%),
-    radial-gradient(circle at 29% 28%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 51%,transparent 51%, transparent 75%,transparent 75%, transparent 100%),
-    radial-gradient(circle at 77% 21%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 35%,transparent 35%, transparent 55%,transparent 55%, transparent 100%),
-    radial-gradient(circle at 65% 91%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 46%,transparent 46%, transparent 76%,transparent 76%, transparent 100%),
-    linear-gradient(45deg, var(--Body),rgb(76, 11, 174)); */
     background-color: var(--body);
     background-repeat: no-repeat;
     background-size: cover;
@@ -116,11 +105,6 @@ header {
     padding: 0 100px;
     z-index: 3;
     background-color: var(--body);
-    /* background-image: radial-gradient(circle at 29% 55%,
-     hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 4%,transparent 4%, transparent 44%,transparent 44%, transparent 100%),
-     radial-gradient(circle at 77% 21%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 35%,transparent 35%, transparent 55%,transparent 55%, transparent 100%),
-     radial-gradient(circle at 65% 91%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 46%,transparent 46%, transparent 76%,transparent 76%, transparent 100%),
-     linear-gradient(45deg, var(--Body),rgb(76, 11, 174)); */
     box-shadow: 0 1px 1px var(--primary);
 }
 
@@ -553,7 +537,6 @@ section.reveal .swiper {
 }
 
 .swiper-wrapper {
-    /* background-color: aqua; */
     margin-top: 25px;
     width: 100%;
     display: flex;
@@ -569,7 +552,7 @@ section.reveal .swiper {
 }
 
 .project-card {
-    border: 2px solid var(--primary);
+    /* border: 2px solid var(--primary); */
     cursor: pointer;
     height: 100%;
     transition: 0.5s;
@@ -577,6 +560,8 @@ section.reveal .swiper {
     transform: translateY(25px);
     opacity: 0;
     visibility: hidden;
+    /* box-shadow: 0 0 10px grey; */
+    background-color: #454242;
 }
 
 .project-card .img {
@@ -603,7 +588,7 @@ section.reveal .swiper {
     font-size: 15px;
     padding: 0 10px;
     color: var(--primary);
-    text-align: justify;
+    text-align: left;
 }
 
 .project-card h2 i {
@@ -869,6 +854,12 @@ main .project-wrapper h2 i {
 
 main .project-wrapper h2 i {
     font-size: 15px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+main .project-wrapper h2 i:hover {
+    color: var(--body);
 }
 
 main .project-wrapper ul li {
@@ -900,6 +891,9 @@ main .tech {
 
 main .tech button {
     margin: 0 10px 5px 0;
+}
+a:hover {
+    text-decoration: none;
 }
 
 @keyframes animate {
@@ -982,11 +976,6 @@ main .tech button {
         height: 100vh;
         transition: 0.3s;
         background-color: var(--body);
-        /* background-image: radial-gradient(circle at 29% 55%,
-     hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 4%,transparent 4%, transparent 44%,transparent 44%, transparent 100%),
-     radial-gradient(circle at 77% 21%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 35%,transparent 35%, transparent 55%,transparent 55%, transparent 100%),
-     radial-gradient(circle at 65% 91%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 46%,transparent 46%, transparent 76%,transparent 76%, transparent 100%),
-     linear-gradient(45deg, var(--Body),rgb(76, 11, 174)); */
     }
 
     header .nav-links.active {
