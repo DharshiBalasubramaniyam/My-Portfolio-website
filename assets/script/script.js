@@ -60,34 +60,5 @@ window.addEventListener('scroll', () => {
     
 })
 
-var swiper = new Swiper(".projects-slider", {
-    cssMode: true,
-    slidesPerView:3,
-    spaceBetween:20,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets:true,
-    },
-    mousewheel: true,
-    keyboard: true,
-    breakpoints: {
-        0: {
-            slidesPerView:1,
-        },
-        750: {
-            slidesPerView:2,
-        },
-        1000: {
-            slidesPerView:3,
-        },
-    },
-});
-
 
 

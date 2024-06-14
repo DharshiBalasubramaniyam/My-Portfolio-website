@@ -2,77 +2,97 @@ const skills = [
     {
         "id": 1,
         "name": "JAVA",
-        "image": "java.png"
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
     },
     {
         "id": 2,
-        "name": "Spring",
-        "image": "spring.png"
-    },
-    {
-        "id": 3,
         "name": "Spring boot",
-        "image": "springboot.png"
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
     },
+    // {
+    //     "id": 3,
+    //     "name": "Spring boot",
+    //     "icon": "springboot.png"
+    // },
     {
         "id": 13,
         "name": "PHP",
-        "image": "php.png"
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
     },
     {
         "id": 14,
         "name": "C",
-        "image": "c.png"
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
     },
     {
         "id": 4,
         "name": "HTML5",
-        "image": "html.png"
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
     },
     {
         "id": 5,
         "name": "CSS",
-        "image": "css.png"
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+    },
+    {
+        "id": 15,
+        "name": "Tailwind CSS",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
     },
     {
         "id": 6,
         "name": "JavaScript",
-        "image": "js.png"
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
     },
     {
         "id": 7,
         "name": "React Js",
-        "image": "react.png"
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
     },
     {
         "id": 8,
         "name": "Node Js",
-        "image": "node.png"
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+    },
+    {
+        "id": 16,
+        "name": "Express",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+    },
+    {
+        "id": 17,
+        "name": "Firebase",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg"
     },
     {
         "id": 9,
         "name": "MySql",
-        "image": "mysql.png"
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
     },
     {
         "id": 10,
-        "name": "Mongo Db",
-        "image": "mongo.png"
+        "name": "Mongo DB",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+    },
+    {
+        "id": 18,
+        "name": "Maven",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg"
+    },
+    {
+        "id": 19,
+        "name": "NPM",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"
     },
     {
         "id": 11,
         "name": "Git",
-        "image": "git.png"
-    },
-    {
-        "id": 12,
-        "name": "GitHub",
-        "image": "github.png"
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
     },
     {
         "id": 13,
-        "name": "Post Man API",
-        "image": "postman.png"
+        "name": "Post Man",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
     }
 ]
 
@@ -84,17 +104,9 @@ function addSkill(skill) {
     skillItemWrapper.setAttribute('class', 'skill-item-wrapper');
     skillItemWrapper.innerHTML = `
     <div class="skill-item">
-        <div class="skill-item-image">
-            <img src="./images//skills/${skill.image}" alt="">
-        </div>
-        <div class="skill-item-name">
+        <img src="${skill.icon}" alt="">
         <h2>${skill.name}</h2>
-        </div>
     </div>`
-    // skillItem.setAttribute('class', 'skill-item');
-    // skillItem.innerHTML = ``;
 
     skillsWrapper.appendChild(skillItemWrapper);
 }
-// <img src="./images//skills/${skill.image}" alt="">
-{/* <p>${skill.name}</p> */}

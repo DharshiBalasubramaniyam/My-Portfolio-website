@@ -11,9 +11,10 @@
 }
 
 :root {
-    --body: rgb(50, 50, 50);
-    --primary: rgb(238, 238, 238);
-    --secondary: rgb(255, 141, 187);
+    --body: rgb(246, 246, 246);
+    --primary: rgb(50, 50, 50);
+    --secondary: rgb(255, 61, 139);
+    --light: rgb(255, 200, 222);
 }
 
 body {
@@ -60,7 +61,7 @@ html {
     animation: load;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    box-shadow: 0 0 25px var(--primary);
+    box-shadow: 0 0 25px var(--light);
 
 }
 
@@ -126,7 +127,7 @@ button {
 }
 
 button {
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 header .nav-links a:hover {
@@ -142,10 +143,13 @@ header .nav-links a.active {
 
 header .nav-links a:last-child,
 button {
-    background-image: linear-gradient(150deg, var(--secondary), var(--primary));
+    background-color: transparent;
     border-radius: 5px;
     color: var(--body);
+    padding: 7px 15px;
     border: none;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
 }
 
 header .nav-links a:last-child {
@@ -155,8 +159,8 @@ header .nav-links a:last-child {
 
 header .nav-links a:last-child:hover,
 button:hover {
-    background-image: linear-gradient(150deg, var(--primary), var(--primary));
-    box-shadow: 0 0 20px var(--primary);
+    background-color: var(--secondary);
+    color: white;
 }
 
 header .nav-links a:last-child:active,
@@ -192,7 +196,16 @@ section {
 
 .home .left h1 {
     font-size: 80px;
-    font-weight: 600;
+    font-weight: 500;
+    background: linear-gradient(to right,var(--secondary), var(--primary));
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    text-fill-color: transparent;
 }
 
 .home .left h2 {
@@ -201,7 +214,15 @@ section {
 
 button {
     margin: 20px 10px 0 0;
-    padding: 5px 15px;
+    padding: 5px 25px;
+    background-color: transparent;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+}
+
+button:hover {
+    background-color: var(--secondary);
+    color: white;
 }
 
 .home .social {
@@ -209,7 +230,7 @@ button {
 }
 
 .home .social a {
-    background-color: var(--secondary);
+    background-color: transparent;
     height: 40px;
     display: inline-flex;
     align-items: center;
@@ -219,17 +240,19 @@ button {
     border-radius: 50%;
     transition: 0.5s;
     margin-right: 15px;
+    border: 2px solid var(--primary);
 }
 
-.home .social a:hover,
-i:hover {
-    background-color: var(--primary);
-    box-shadow: 0 0 20px var(--primary);
+.home .social a:hover
+/*, i:hover  */
+    {
+    background-color: var(--light);
+    border: 2px solid var(--light);
 }
 
 .home .social a i {
     font-size: 20px;
-    color: var(--body);
+    color: var(--primary);
 }
 
 .home .right {
@@ -257,8 +280,8 @@ section.reveal .right {
     display: block;
     position: relative;
     border-radius: 50%;
-    box-shadow: 0 0 50px var(--primary);
-    background-image: linear-gradient(var(--secondary), var(--primary));
+    box-shadow: 0 0 50px var(--light);
+    background-image: linear-gradient(var(--secondary), var(--light));
     background-color: var(--body);
     transition: transform 0.3s;
     cursor: pointer;
@@ -316,12 +339,12 @@ section.reveal .about-content {
     text-align: center;
     flex: 1 1 400px;
     transition: 0.3s;
-    border: 2px solid var(--primary);
+    border: 2px solid var(--light);
     cursor: pointer;
 }
 
 .about ul li:hover {
-    box-shadow: 0 0 15px var(--primary);
+    box-shadow: 0 0 15px var(--light);
 }
 
 .about ul li span {
@@ -349,7 +372,8 @@ h1 span {
 
 .education .education-card {
     display: block;
-    border: 2px solid var(--primary);
+    /* border: 2px solid var(--primary); */
+    border: 2px solid var(--light);
     flex: 1 1 300px;
     padding: 10px;
     cursor: pointer;
@@ -405,13 +429,24 @@ section.reveal.blogs a {
     border-bottom: 1px solid var(--secondary);
 }
 
+.education .education-card .card-item p,
+.education .education-card .card-item a {
+    color: grey;
+    font-size: 14px;
+}
+
+.education .education-card .card-item p span {
+    font-weight: 600;
+    font-size: 17px;
+}
+
 .education .education-card .card-item:last-of-type {
     border-bottom: none;
 }
 
 .education .education-card .card-item {
     border: none;
-    border-left: 2px solid var(--primary);
+    border-left: 2px solid var(--secondary);
     position: relative;
     padding: 0 10px 25px 20px;
     text-align: left;
@@ -423,8 +458,8 @@ section.reveal.blogs a {
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: var(--secondary);
-    border: 2px solid var(--primary);
+    background-color: var(--light);
+    border: 2px solid var(--secondary);
     right: calc(100% - 6.5px);
     top: 5px;
 }
@@ -439,7 +474,8 @@ section.reveal.blogs a {
 
 /* .skills .skill-card:hover, */
 .education .education-card:hover {
-    box-shadow: 0 0 15px var(--primary);
+    box-shadow: 0 0 10px var(--light);
+
 }
 
 /* .skill-card .card-item div, */
@@ -480,41 +516,35 @@ section.reveal .skill-card-wrapper {
 }
 
 .skill-item {
-    position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    border: 1px solid #f1f1f1;
-
-}
-
-.skill-item-wrapper:hover .skill-item {
-    transform: rotateX(180deg);
-}
-
-.skill-item-image,
-.skill-item-name {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.skill-item-image img {
-    width: 100%;
-    height: 100%;
-}
-
-.skill-item-name {
-    background-color: #4c4c4c;
-    color: white;
-    transform: rotateX(180deg);
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 2px solid var(--light);
+    gap: 15px;
+}
+
+.skill-item:hover img {
+    transform: scale(1.2);
+}
+
+.skill-item:hover {
+    box-shadow: 0 0 10px var(--light);
+
+}
+
+.skill-item img {
+    width: 50%;
+    height: 50%;
+    transition: 0.2s;
+}
+
+.skill-item h2 {
+    font-size: 16px;
 }
 
 /* project styles */
@@ -540,7 +570,7 @@ section.reveal .swiper {
     margin-top: 25px;
     width: 100%;
     display: flex;
-    align-items: stretch;
+    /* align-items: stretch; */
     justify-content: space-between;
     gap: 25px;
     flex-wrap: wrap;
@@ -552,7 +582,6 @@ section.reveal .swiper {
 }
 
 .project-card {
-    /* border: 2px solid var(--primary); */
     cursor: pointer;
     height: 100%;
     transition: 0.5s;
@@ -560,8 +589,6 @@ section.reveal .swiper {
     transform: translateY(25px);
     opacity: 0;
     visibility: hidden;
-    /* box-shadow: 0 0 10px grey; */
-    background-color: #454242;
 }
 
 .project-card .img {
@@ -575,7 +602,6 @@ section.reveal .swiper {
     align-items: center;
     font-size: 19px;
     margin: 5px 0;
-    padding: 0 10px;
 }
 
 .project-card h2 span {
@@ -586,14 +612,12 @@ section.reveal .swiper {
 
 .project-card p {
     font-size: 15px;
-    padding: 0 10px;
     color: var(--primary);
     text-align: left;
 }
 
 .project-card h2 i {
     margin-left: 10px;
-    background-color: var(--secondary);
     color: var(--body);
     border-radius: 50%;
     height: 35px;
@@ -603,6 +627,8 @@ section.reveal .swiper {
     width: 35px;
     font-size: 14px;
     transition: 0.3s;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
 }
 
 .project-card h2 i:first-of-type {
@@ -610,8 +636,8 @@ section.reveal .swiper {
 }
 
 .project-card h2 i:hover {
+    background-color: var(--secondary);
     color: var(--body);
-    background-color: var(--primary);
 }
 
 .project-card .img img {
@@ -620,46 +646,45 @@ section.reveal .swiper {
     transition: 0.3s;
 }
 
-.project-card:hover,
-.blogs a:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px var(--primary);
-}
-
-.tech {
-    padding: 0 10px 10px;
-}
-
 .tech button {
     font-size: 15px;
     padding: 3px 10px;
-    margin: 10px 5px 0 0;
+    margin: 10px 10px 0 0;
     pointer-events: none;
 }
 
 .tech button:first-of-type {
     background-color: rgb(255, 233, 250);
     color: rgb(30, 6, 139);
+    border: 1px solid rgb(30, 6, 139);
 }
 
 .tech button:nth-of-type(2) {
     background-color: rgb(218, 255, 218);
     color: green;
+    border: 1px solid green;
+
 }
 
 .tech button:nth-of-type(3) {
     background-color: rgb(255, 254, 218);
     color: rgb(120, 80, 7);
+    border: 1px solid rgb(120, 80, 7);
+
 }
 
 .tech button:nth-of-type(4) {
     background-color: rgb(255, 218, 218);
     color: rgb(197, 0, 0);
+    border: 1px solid rgb(197, 0, 0);
+
 }
 
 .tech button:nth-of-type(5) {
     background-color: rgb(238, 218, 255);
     color: rgb(148, 0, 197);
+    border: 1px solid rgb(148, 0, 197);
+
 }
 
 .swiper-pagination-bullet {
@@ -693,11 +718,6 @@ section.reveal .swiper {
 
 }
 
-i:hover {
-    background-color: var(--primary);
-    box-shadow: 0 0 20px var(--primary);
-}
-
 /* blogs styles */
 .blogs a {
     flex: 1 1 350px;
@@ -711,26 +731,26 @@ i:hover {
 
 .blogs .blog-card {
     flex: 1 1 350px;
-    background: #4c4c4c;
+    /* background: var(--light); */
     padding: 10px;
     height: 350px;
     display: flex;
-    gap: 20px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--primary);
+    border: 2px solid var(--light);
 
 }
 
 .blogs .blog-card img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
 }
 
 .blogs .blog-card h1 {
     font-size: 2em;
-    text-transform: capitalize
+    text-transform: capitalize;
+    margin-top: 10px;
 }
 
 section.reveal .project-card,
@@ -742,8 +762,7 @@ section.reveal.blogs a {
 }
 
 section.reveal.blogs a:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px var(--primary);
+    box-shadow: 0 0 15px var(--light);
 }
 
 /* contact form styles */
@@ -780,18 +799,19 @@ section.reveal form {
 textarea {
     width: 100%;
     padding: 10px;
-    background-color: rgb(76, 76, 76);
+    background-color: transparent;
     color: var(--primary);
+    border: 2px solid var(--light);
     font-size: 16px;
     border-radius: 5px;
-    border: none;
+    /* border: none; */
     outline: none;
 
 }
 
 .input-box input:focus,
 textarea:focus {
-    box-shadow: 0 0 10px var(--primary);
+    box-shadow: 0 0 10px var(--light);
 }
 
 .input-box:last-of-type {
@@ -858,6 +878,7 @@ main .project-wrapper h2 i {
     border-radius: 50%;
     transition: 0.3s;
 }
+
 main .project-wrapper h2 i:hover {
     color: var(--body);
 }
@@ -892,6 +913,7 @@ main .tech {
 main .tech button {
     margin: 0 10px 5px 0;
 }
+
 a:hover {
     text-decoration: none;
 }
@@ -1077,14 +1099,23 @@ a:hover {
     footer p {
         font-size: 11px;
     }
+
     .skill-item-wrapper {
         background-color: transparent;
         width: 150px;
         height: 150px;
         perspective: 1000px;
     }
-    .skill-item-wrapper .skill-item-name h2 {
-        font-size: 16px;
+
+    .skill-item h2 {
+        font-size: 11px;
+    }
+    .skill-item img {
+        height: 30%;
+        width: 30%;
+    }
+    .blogs .blog-card h1 {
+        font-size: 1.5em;
     }
 
 
@@ -1100,12 +1131,14 @@ a:hover {
     .swiper-slide {
         height: max-content;
     }
+
     .skill-item-wrapper {
         background-color: transparent;
         width: 75px;
         height: 75px;
         perspective: 1000px;
     }
+
     .skill-item-wrapper .skill-item-name h2 {
         font-size: 14px;
     }
