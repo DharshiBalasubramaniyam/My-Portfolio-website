@@ -33,7 +33,7 @@ html {
 }
 
 ::selection {
-    background-color: var(--primary);
+    background-color: var(--secondary);
     color: var(--body);
 }
 
@@ -42,7 +42,7 @@ html {
     height: 100dvh;
     width: 100%;
     background-color: var(--body);
-    z-index: 5;
+    z-index: 15;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,14 +104,14 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 100px;
-    z-index: 3;
+    z-index: 10;
     background-color: var(--body);
     box-shadow: 0 1px 1px var(--primary);
 }
 
 header .logo a {
     font-size: 35px;
-    color: var(--primary);
+    color: var(--secondary);
     font-weight: 600;
     text-decoration: none;
 }
@@ -197,15 +197,7 @@ section {
 .home .left h1 {
     font-size: 80px;
     font-weight: 500;
-    background: linear-gradient(to right,var(--secondary), var(--primary));
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -ms-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    -ms-text-fill-color: transparent;
-    text-fill-color: transparent;
+    color: var(--secondary);
 }
 
 .home .left h2 {
@@ -243,9 +235,7 @@ button:hover {
     border: 2px solid var(--primary);
 }
 
-.home .social a:hover
-/*, i:hover  */
-    {
+.home .social a:hover{
     background-color: var(--light);
     border: 2px solid var(--light);
 }
@@ -381,14 +371,24 @@ h1 span {
     transform: translateY(25px);
     opacity: 0;
     visibility: hidden;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+    z-index: 5;
 }
-
-.education .education-card:nth-of-type(2) {
-    transition-delay: 0.1s;
-}
-
-.education .education-card:nth-of-type(3) {
-    transition-delay: 0.2s;
+.education-card::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: calc(50% - 125px);
+    width: 250px;
+    height: 120px;
+    background: var(--light);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: scale(1);
+    transition: opacity 0.6s, transform 0.8s;
+    z-index: -1;
 }
 
 section.reveal .education-card,
@@ -526,6 +526,9 @@ section.reveal .skill-card-wrapper {
     border-radius: 4px;
     border: 2px solid var(--light);
     gap: 15px;
+    position: relative;
+    border-radius: 0 25px 0 25px;
+    cursor: pointer;
 }
 
 .skill-item:hover img {
@@ -534,7 +537,7 @@ section.reveal .skill-card-wrapper {
 
 .skill-item:hover {
     box-shadow: 0 0 10px var(--light);
-
+    /* border-radius: 0 25px 0 25px; */
 }
 
 .skill-item img {
@@ -654,7 +657,7 @@ section.reveal .swiper {
 }
 
 .tech button:first-of-type {
-    background-color: rgb(255, 233, 250);
+    background-color: rgb(233, 239, 255);
     color: rgb(30, 6, 139);
     border: 1px solid rgb(30, 6, 139);
 }
@@ -731,7 +734,6 @@ section.reveal .swiper {
 
 .blogs .blog-card {
     flex: 1 1 350px;
-    /* background: var(--light); */
     padding: 10px;
     height: 350px;
     display: flex;
@@ -739,7 +741,31 @@ section.reveal .swiper {
     align-items: center;
     justify-content: center;
     border: 2px solid var(--light);
-
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+    z-index: 5;
+}
+.blog-card::before{
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+    background: var(--light);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: scale(1);
+    transition: opacity 0.6s, transform 0.6s;
+    z-index: -1;
+}
+.blog-card:hover::before,
+.education-card:hover::before {
+    opacity: 1;
+    transform: scale(12);
 }
 
 .blogs .blog-card img {
@@ -828,6 +854,7 @@ textarea:focus {
 footer p {
     text-align: center;
     margin: 0 0 5px 0;
+    background-color: var(--light);
 }
 
 /* projects page styles */
