@@ -14,7 +14,7 @@
     --body: rgb(246, 246, 246);
     --primary: rgb(50, 50, 50);
     --secondary: rgb(255, 61, 139);
-    --light: rgb(255, 200, 222);
+    --light: rgb(255, 164, 201);
 }
 
 body {
@@ -431,7 +431,7 @@ section.reveal.blogs a {
 
 .education .education-card .card-item p,
 .education .education-card .card-item a {
-    color: grey;
+    color: rgb(90, 90, 90);
     font-size: 14px;
 }
 
@@ -472,13 +472,11 @@ section.reveal.blogs a {
     color: var(--secondary);
 }
 
-/* .skills .skill-card:hover, */
 .education .education-card:hover {
     box-shadow: 0 0 10px var(--light);
-
+    border: 2px solid var(--primary);
 }
 
-/* .skill-card .card-item div, */
 .education-card .card-item div {
     display: flex;
     align-items: center;
@@ -529,6 +527,7 @@ section.reveal .skill-card-wrapper {
     position: relative;
     border-radius: 0 25px 0 25px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .skill-item:hover img {
@@ -722,7 +721,7 @@ section.reveal .swiper {
 }
 
 /* blogs styles */
-.blogs a {
+.blogs .swiper-wrapper a {
     flex: 1 1 350px;
     height: 350px;
     display: inline-flex;
@@ -747,6 +746,7 @@ section.reveal .swiper {
     overflow: hidden;
     transition: transform 0.3s;
     z-index: 5;
+    transition: 0.3s;
 }
 .blog-card::before{
     content: '';
@@ -780,15 +780,16 @@ section.reveal .swiper {
 }
 
 section.reveal .project-card,
-section.reveal.blogs a {
+section.reveal.blogs .swiper-wrapper a {
     cursor: pointer;
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
 }
 
-section.reveal.blogs a:hover {
+section.reveal.blogs .blog-card:hover {
     box-shadow: 0 0 15px var(--light);
+    border: 2px solid var(--primary);
 }
 
 /* contact form styles */
