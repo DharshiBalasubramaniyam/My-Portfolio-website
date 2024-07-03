@@ -525,23 +525,23 @@ section.reveal .skill-card-wrapper {
     border: 2px solid var(--light);
     gap: 15px;
     position: relative;
-    border-radius: 0 25px 0 25px;
+    padding: 20px;
+    border-radius: 0 20px 0 20px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .skill-item:hover img {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .skill-item:hover {
     box-shadow: 0 0 10px var(--light);
-    /* border-radius: 0 25px 0 25px; */
 }
 
 .skill-item img {
     width: 50%;
-    height: 50%;
+    height: 48%;
     transition: 0.2s;
 }
 
@@ -1130,17 +1130,16 @@ a:hover {
 
     .skill-item-wrapper {
         background-color: transparent;
-        width: 150px;
-        height: 150px;
-        perspective: 1000px;
+        width: 160px;
+        height: 160px;
     }
 
     .skill-item h2 {
         font-size: 11px;
     }
     .skill-item img {
-        height: 30%;
-        width: 30%;
+        height: 50%;
+        width: 50%;
     }
     .blogs .blog-card h1 {
         font-size: 1.5em;
@@ -1162,9 +1161,8 @@ a:hover {
 
     .skill-item-wrapper {
         background-color: transparent;
-        width: 75px;
-        height: 75px;
-        perspective: 1000px;
+        width: 90px;
+        height: 90px;
     }
 
     .skill-item-wrapper .skill-item-name h2 {

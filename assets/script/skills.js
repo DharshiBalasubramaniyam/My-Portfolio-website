@@ -93,6 +93,21 @@ const skills = [
         "id": 13,
         "name": "Post Man",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+    },
+    {
+        "id": 20,
+        "name": "Docker",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+    },
+    {
+        "id": 21,
+        "name": "AWS",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+    },
+    {
+        "id": 22,
+        "name": "GitHub Actions",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg"
     }
 ]
 
