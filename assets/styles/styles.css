@@ -309,6 +309,7 @@ section.reveal .about-content {
     text-align: center;
     margin-bottom: 20px;
     color: var(--primary);
+    font-family: "Montserrat", 'Poppins', Verdana, Geneva, Tahoma, sans-serif, Georgia, 'Times New Roman', Times, serif;
 }
 
 .about p {
