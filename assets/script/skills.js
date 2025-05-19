@@ -9,11 +9,6 @@ const skills = [
         "name": "Spring boot",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
     },
-    // {
-    //     "id": 3,
-    //     "name": "Spring boot",
-    //     "icon": "springboot.png"
-    // },
     {
         "id": 13,
         "name": "PHP",
@@ -43,6 +38,11 @@ const skills = [
         "id": 6,
         "name": "JavaScript",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+    },
+    {
+        "id": 23,
+        "name": "TypeScript",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
     },
     {
         "id": 7,
@@ -85,6 +85,11 @@ const skills = [
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"
     },
     {
+        "id": 26,
+        "name": "Redux",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg"
+    },
+    {
         "id": 11,
         "name": "Git",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
@@ -108,7 +113,18 @@ const skills = [
         "id": 22,
         "name": "GitHub Actions",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg"
+    },
+    {
+        "id": 24,
+        "name": "Kubernetes",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg"
+    },
+    {
+        "id": 25,
+        "name": "Ballerina",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ballerina/ballerina-original.svg"
     }
+    
 ]
 
 const skillsWrapper = document.querySelector(".skill-card-wrapper");
