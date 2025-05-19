@@ -118,11 +118,6 @@ const skills = [
         "id": 24,
         "name": "Kubernetes",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg"
-    },
-    {
-        "id": 25,
-        "name": "Ballerina",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ballerina/ballerina-original.svg"
     }
     
 ]
