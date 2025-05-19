@@ -102,7 +102,7 @@ const skills = [
     {
         "id": 21,
         "name": "AWS",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
     },
     {
         "id": 22,
