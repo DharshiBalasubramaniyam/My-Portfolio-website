@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 
 * {
     padding: 0;
@@ -8,7 +10,7 @@
     outline: none;
     list-style-type: none;
     color: var(--primary);
-    font-family: "Montserrat", 'Poppins', Verdana, Geneva, Tahoma, sans-serif, Georgia, 'Times New Roman', Times, serif;
+    font-family: "Nunito", 'Poppins', Verdana, Geneva, Tahoma, sans-serif, Georgia, 'Times New Roman', Times, serif;
 }
 
 :root {
@@ -436,7 +438,7 @@ section.reveal.blogs a {
 .education .education-card .card-item p,
 .education .education-card .card-item a {
     color: var(--secondary);
-    font-size: 14px;
+    /* font-size: 14px; */
 }
 
 .education .education-card .card-item p span {
@@ -727,6 +729,10 @@ section.reveal .swiper {
     transition: 0.3s;
     cursor: pointer;
 
+}
+
+.contact-icon i:hover{
+    background-color: var(--primary);
 }
 
 /* blogs styles */
