@@ -8,7 +8,7 @@
     outline: none;
     list-style-type: none;
     color: var(--primary);
-    font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif, Georgia, 'Times New Roman', Times, serif;
+    font-family: "Montserrat", 'Poppins', Verdana, Geneva, Tahoma, sans-serif, Georgia, 'Times New Roman', Times, serif;
 }
 
 :root {
@@ -367,7 +367,6 @@ h1 span {
 
 .education .education-card {
     display: block;
-    /* border: 2px solid var(--primary); */
     border: 2px solid var(--light);
     flex: 1 1 300px;
     padding: 10px;
@@ -409,7 +408,7 @@ section.reveal.blogs a {
     position: relative;
     width: 200px;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .education .education-card h2:after {
@@ -445,9 +444,6 @@ section.reveal.blogs a {
     font-size: 17px;
 }
 
-.education .education-card .card-item:last-of-type {
-    border-bottom: none;
-}
 
 .education .education-card .card-item {
     border: none;
@@ -457,6 +453,10 @@ section.reveal.blogs a {
     text-align: left;
 }
 
+.education .education-card .card-item:last-of-type {
+    border-bottom: none;
+    padding: 0 10px 0 20px;
+}
 .education .education-card .card-item::before {
     position: absolute;
     content: '';
@@ -490,6 +490,10 @@ section.reveal.blogs a {
 
 .education-card .card-item div {
     align-items: flex-start;
+}
+
+.education .education-card .card-item:first-of-type {
+    margin-top: 25px;
 }
 
 /* skillls styles new */
