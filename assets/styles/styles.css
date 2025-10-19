@@ -666,13 +666,13 @@ section.reveal .swiper {
     pointer-events: none;
 }
 
-.tech button:first-of-type {
+.tech button:first-of-type, .tech button:nth-of-type(6) {
     background-color: rgb(233, 239, 255);
     color: rgb(30, 6, 139);
     border: 1px solid rgb(30, 6, 139);
 }
 
-.tech button:nth-of-type(2) {
+.tech button:nth-of-type(2), .tech button:nth-of-type(7) {
     background-color: rgb(218, 255, 218);
     color: green;
     border: 1px solid green;
